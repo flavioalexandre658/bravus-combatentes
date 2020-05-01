@@ -1,0 +1,6 @@
+  Assets/Mirror/
+        Assets/ScriptTemplates/
+        "Assets/Sprites/Cen\303\241rios/"
+        Assets/Sprites/Pallets/
+        Assets/TextMesh Pro/
+        Temp/

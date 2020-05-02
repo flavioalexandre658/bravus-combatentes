@@ -4,3 +4,4 @@
         Assets/Sprites/Pallets/
         Assets/TextMesh Pro/
         Temp/
+tetetetete

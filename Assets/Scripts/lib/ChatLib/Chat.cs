@@ -10,11 +10,12 @@ using UnityEngine;
         [SerializeField] private TMP_InputField inputField = null;
 
         private static event Action<string> OnMessage;
+        private string playerName = null;
 
         public override void OnStartAuthority()
         {
+            CmdPlayerName(PlayerNameInput.DisplayName);
             chatUI.SetActive(true);
-
             OnMessage += HandleNewMessage;
         }
 
@@ -45,11 +46,17 @@ using UnityEngine;
         }
 
         [Command]
+        private void CmdPlayerName(string playerName) => RpcPlayerName(playerName);
+
+        [ClientRpc]
+        private void RpcPlayerName(string playerName) => this.playerName = playerName;
+
+        [Command]
         private void CmdSendMessage(string message)
         {
-            RpcHandleMessage($"[{PlayerNameInput.DisplayName}]: {message}");
+            RpcHandleMessage($"[{playerName}]: {message}");
         }
-
+        
         [ClientRpc]
         private void RpcHandleMessage(string message)
         {

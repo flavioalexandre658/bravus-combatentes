@@ -233,7 +233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 5
-  m_Text: Alexandre
+  m_Text: 
 --- !u!114 &4793724925121784580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,10 +1137,11 @@ GameObject:
   - component: {fileID: 7105670380978315409}
   - component: {fileID: 7105670380978315408}
   - component: {fileID: 7105670380978315411}
-  - component: {fileID: 7105670380978315403}
   - component: {fileID: 972346809}
   - component: {fileID: -2409086590340739971}
   - component: {fileID: 703042027334050242}
+  - component: {fileID: -5145553835663603541}
+  - component: {fileID: 1279835361157533292}
   m_Layer: 8
   m_Name: Warrior
   m_TagString: Player
@@ -1337,7 +1338,7 @@ MonoBehaviour:
   creature: {fileID: 7105670380978315411}
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1280
 --- !u!114 &7105670380978315409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,25 +1384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
---- !u!114 &7105670380978315403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7105670380978315407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7ed0f346420fb44da1a31491df65c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  textPlayerName: {fileID: 3885268532564488519}
-  health: {fileID: 7105670380915044158}
-  stamina: {fileID: 7105670381110801915}
-  cam: {fileID: 7105670380391189849}
-  creature: {fileID: 7105670380978315411}
 --- !u!114 &972346809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,6 +1434,65 @@ MonoBehaviour:
   chatUI: {fileID: 7938200162692969416}
   chatText: {fileID: 4031610940821141546}
   inputField: {fileID: 8396955163302402377}
+--- !u!114 &-5145553835663603541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105670380978315407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnClientConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClientDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerConnected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDataReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerError:
+    m_PersistentCalls:
+      m_Calls: []
+  OnServerDisconnected:
+    m_PersistentCalls:
+      m_Calls: []
+  port: 7777
+  NoDelay: 1
+  serverMaxMessageSize: 16384
+  clientMaxMessageSize: 16384
+--- !u!114 &1279835361157533292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105670380978315407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ed0f346420fb44da1a31491df65c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  textPlayerName: {fileID: 3885268532564488519}
+  health: {fileID: 7105670380915044158}
+  stamina: {fileID: 7105670381110801915}
+  cam: {fileID: 7105670380391189849}
+  creature: {fileID: 7105670380978315411}
 --- !u!1 &7105670381110801913
 GameObject:
   m_ObjectHideFlags: 0

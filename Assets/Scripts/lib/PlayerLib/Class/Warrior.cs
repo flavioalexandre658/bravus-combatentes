@@ -50,7 +50,6 @@ public class Warrior : Creature, ICreatureAttacks
     [ClientRpc]
     private void RpcAttackAnimation(bool isAttacking)
     {
-        Debug.Log(isAttacking);
         animator.SetBool("attack", isAttacking);
     }
 
